@@ -18,7 +18,11 @@ public class Module extends AbstractModule {
 
     @Override
     public void configure() {
-    	bind(UpdateIPTask.class).asEagerSingleton();
+    	
+    	// only bind if configured as server
+    	if (System.getProperty("deployMode") == "server") {
+    		bind(UpdateIPTask.class).asEagerSingleton();
+    	} 
     }
 
 }

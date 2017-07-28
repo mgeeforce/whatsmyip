@@ -211,3 +211,13 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value
     play.filters.hosts.AllowedHostsFilter
 
 2017-07-28 15:06:15,249 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev)
+2017-07-28 15:36:15,205 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-30 - Shutting down connection pool.
+2017-07-28 15:36:15,299 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-30 - Creating Pool for datasource 'default'
+2017-07-28 15:36:15,306 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-30 - Database [default] connected at jdbc:postgresql://localhost:5432/whatismyip
+2017-07-28 15:36:15,494 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-30 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2017-07-28 15:36:15,497 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-30 - Application started (Dev)
