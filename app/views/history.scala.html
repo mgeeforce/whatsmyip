@@ -4,7 +4,7 @@
 <div class="jumbotron">
   <h1>Adeptus IP History</h1>
   <p class="lead">
-  	@if(addresses(0) == null) {
+  	@if(addresses == null) {
   		No IP address has been registered!
   	} else {
   		IP <strong>@addresses(0).ipAddress</strong> was recorded at <strong>@addresses(0).created.format("yyyy-MM-dd HH:mm:ss")</strong>.</p>
