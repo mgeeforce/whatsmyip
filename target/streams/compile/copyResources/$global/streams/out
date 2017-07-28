@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/application.conf,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/evolutions,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/logback.xml,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/routes,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/evolutions/default,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mike/Projects/play/whatsmyip/conf/evolutions/default/1.sql,/Users/mike/Projects/play/whatsmyip/target/scala-2.12/classes/evolutions/default/1.sql)[0m

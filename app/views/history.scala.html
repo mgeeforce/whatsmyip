@@ -1,0 +1,29 @@
+@(addresses: List[io.adeptus.whatismyip.models.Address])
+
+@main("Welcome to Play") {
+<div class="jumbotron">
+  <h1>Adeptus IP History</h1>
+  <p class="lead">IP <strong>@addresses(0).ipAddress</strong> was recorded at <strong>@addresses(0).created.format("yyyy-MM-dd HH:mm:ss")</strong>.</p>
+  <hr class="my-4">
+</div>
+  
+  Your IP address history is:
+  
+  <table class="table table-sm table-striped table-bordered">
+  	<thead>
+  		<tr>
+  			<th>IP</th>
+  			<th>Created</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  	
+  	@for(address <- addresses) {
+  		<tr>
+  			<td>@address.ipAddress</td>
+  			<td>@address.created.format("yyyy-MM-dd HH:mm:ss")</td>
+  		</tr>
+  	}
+  	</tbody>
+  </table>
+}
