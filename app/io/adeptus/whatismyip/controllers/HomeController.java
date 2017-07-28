@@ -13,6 +13,8 @@ import io.adeptus.whatismyip.services.Ipify;
 import play.mvc.*;
 import play.libs.ws.*;
 
+import com.typesafe.config.Config;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -21,6 +23,7 @@ import play.libs.ws.*;
 public class HomeController extends Controller {
 	
     @Inject Ipify ipify;
+    @Inject Config config;
 
     /**
      * An action that renders an HTML page with a welcome message.
@@ -64,7 +67,7 @@ public class HomeController extends Controller {
     }
     
     public Result show() {
-    	String mode = System.getProperty("appMode");
+    	String mode = config.getString("appMode");
     	List<Address> addresses = Address.find.query().setMaxRows(10).orderBy("created desc").findList();
     	return ok(views.html.history.render(addresses, mode));
     }

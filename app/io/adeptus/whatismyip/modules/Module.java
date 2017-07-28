@@ -15,14 +15,11 @@ import io.adeptus.whatismyip.tasks.UpdateIPTask;
  * configuration file.
  */
 public class Module extends AbstractModule {
+	
 
     @Override
     public void configure() {
-    	
-    	// only bind if configured as server
-    	if (System.getProperty("appMode") == "server") {
-    		bind(UpdateIPTask.class).asEagerSingleton();
-    	} 
+   		bind(UpdateIPTask.class).asEagerSingleton();
     }
 
 }
