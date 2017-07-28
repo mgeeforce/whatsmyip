@@ -64,8 +64,9 @@ public class HomeController extends Controller {
     }
     
     public Result show() {
+    	String mode = System.getProperty("appMode");
     	List<Address> addresses = Address.find.query().setMaxRows(10).orderBy("created desc").findList();
-    	return ok(views.html.history.render(addresses));
+    	return ok(views.html.history.render(addresses, mode));
     }
     
     
