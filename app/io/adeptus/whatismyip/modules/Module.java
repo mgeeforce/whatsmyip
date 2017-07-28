@@ -22,4 +22,5 @@ public class Module extends AbstractModule {
    		bind(UpdateIPTask.class).asEagerSingleton();
     }
 
+    
 }
