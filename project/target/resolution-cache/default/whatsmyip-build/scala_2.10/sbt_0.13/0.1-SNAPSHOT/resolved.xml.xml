@@ -4,7 +4,7 @@
 		module="whatsmyip-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170726112253"
+		publication="20170728162136"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
@@ -40,6 +40,7 @@
 		<dependency org="com.typesafe.sbt" name="sbt-play-ebean" rev="4.0.0-RC1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="com.typesafe.sbt" name="sbt-play-enhancer" rev="1.2.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="com.typesafe.sbteclipse" name="sbteclipse-plugin" rev="5.1.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
+		<dependency org="com.heroku" name="sbt-heroku" rev="1.0.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="org.foundweekends.giter8" name="sbt-giter8-scaffold" rev="0.7.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 	</dependencies>
 </ivy-module>

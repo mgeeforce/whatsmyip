@@ -20,7 +20,7 @@ public class Module extends AbstractModule {
     public void configure() {
     	
     	// only bind if configured as server
-    	if (System.getProperty("deployMode") == "server") {
+    	if (System.getProperty("appMode") == "server") {
     		bind(UpdateIPTask.class).asEagerSingleton();
     	} 
     }
