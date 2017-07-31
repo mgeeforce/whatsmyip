@@ -11,6 +11,7 @@ import com.typesafe.config.Config;
 
 import akka.actor.ActorSystem;
 import io.adeptus.whatismyip.services.Ipify;
+import play.Logger;
 import scala.concurrent.ExecutionContext;
 import scala.concurrent.duration.FiniteDuration;
 
@@ -35,7 +36,8 @@ public class UpdateIPTask {
 	    }
 
 	    private void initialize() {
-	    	if (config.getString("appMode") == "server") {
+	    	Logger.info("config.getString test yields "+config.getString("appMode").equals("server"));
+	    	if (config.getString("appMode").equals("server")) {
 		        this.actorSystem.scheduler().schedule(
 		        	FiniteDuration.create(10, TimeUnit.SECONDS), // initialDelay
 		            FiniteDuration.create(12, TimeUnit.HOURS), // interval
