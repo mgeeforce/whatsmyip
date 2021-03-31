@@ -1,5 +1,6 @@
 package io.adeptus.whatismyip.services;
 
+import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 
 import javax.inject.Inject;
@@ -20,11 +21,18 @@ public class Ipify {
         this.config = config;
     }
 
-    public CompletionStage<JsonNode> call() {     
+    public CompletionStage<JsonNode> call() {
         return ws.url("https://api.ipify.org?format=json").get().thenApply(WSResponse::asJson);
     }
    
+    
+    /**
+     * Call ipify and then post the result to app deployed on Heroku
+     * @return CompletionStage<WSResponse>
+     */
     public CompletionStage<WSResponse> post() {
-    	return call().thenCompose(response -> ws.url(config.getString("clientUrl")).post(response));
+    	// need to provide time for the Heroku to start
+    	Duration timeout = Duration.ofMinutes(5); 
+    	return call().thenCompose(response -> ws.url(config.getString("clientUrl")).setRequestTimeout(timeout).post(response));
     }
 }

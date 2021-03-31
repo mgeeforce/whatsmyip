@@ -5,3 +5,9 @@ target
 tmp
 dist
 .cache
+bin/*
+.settings
+.DS_Store
+.cache-main
+.cache-tests
+.classpath
